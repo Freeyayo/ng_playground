@@ -9,6 +9,7 @@ import { PageNotFoundComponent } from './core/components/page-not-found/page-not
 import { SearchDialogComponent } from './core/components/search-dialog/search-dialog.component';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PageNotFoundComponent,
     SearchDialogComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, SharedModule, BrowserAnimationsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    SharedModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
